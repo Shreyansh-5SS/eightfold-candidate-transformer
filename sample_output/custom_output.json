@@ -1,0 +1,83 @@
+[
+  {
+    "full_name": "Aarav Sharma",
+    "full_name_confidence": 0.9,
+    "primary_email": "aarav.sharma@example.com",
+    "primary_email_confidence": 0.9,
+    "phone": "+919876543210",
+    "phone_confidence": 0.9,
+    "skills": null,
+    "skills_confidence": 0.0,
+    "_overall_confidence": 0.9
+  },
+  {
+    "full_name": "Priya Verma",
+    "full_name_confidence": 0.9,
+    "primary_email": "priya.verma@example.com",
+    "primary_email_confidence": 0.9,
+    "phone": "+919876500000",
+    "phone_confidence": 0.9,
+    "skills": null,
+    "skills_confidence": 0.0,
+    "_overall_confidence": 0.9
+  },
+  {
+    "full_name": "Rohan Mehta",
+    "full_name_confidence": 0.9,
+    "primary_email": "rohan.mehta@example.com",
+    "primary_email_confidence": 0.9,
+    "phone": null,
+    "phone_confidence": 0.0,
+    "skills": null,
+    "skills_confidence": 0.0,
+    "_overall_confidence": 0.9
+  },
+  {
+    "full_name": "Linus Torvalds",
+    "full_name_confidence": 1.0,
+    "primary_email": "torvalds@example.com",
+    "primary_email_confidence": 0.9,
+    "phone": "+911234567890",
+    "phone_confidence": 0.9,
+    "skills": [
+      "C",
+      "C++",
+      "Openscad"
+    ],
+    "skills_confidence": 0.7,
+    "_overall_confidence": 0.84
+  },
+  {
+    "full_name": "Guido van Rossum",
+    "full_name_confidence": 0.7,
+    "primary_email": null,
+    "primary_email_confidence": 0.0,
+    "phone": null,
+    "phone_confidence": 0.0,
+    "skills": [
+      "C",
+      "C++",
+      "HTML",
+      "JavaScript",
+      "Python",
+      "TypeScript"
+    ],
+    "skills_confidence": 0.7,
+    "_overall_confidence": 0.7
+  },
+  {
+    "full_name": "The Octocat",
+    "full_name_confidence": 0.7,
+    "primary_email": null,
+    "primary_email_confidence": 0.0,
+    "phone": null,
+    "phone_confidence": 0.0,
+    "skills": [
+      "CSS",
+      "HTML",
+      "Ruby"
+    ],
+    "skills_confidence": 0.7,
+    "_overall_confidence": 0.7
+  }
+]
