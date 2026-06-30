@@ -1,0 +1,6 @@
+name,email,phone,current_company,title
+Aarav Sharma,aarav.sharma@example.com,+919876543210,TechNova Inc,Software Engineer
+Priya Verma,priya.verma@example.com,9876500000,DataWorks,Senior Analyst
+Rohan Mehta,rohan.mehta@example.com,,CloudSys,Backend Developer
+Linus Torvalds,torvalds@example.com,123-456-7890,Linux Foundation,Kernel Maintainer
+,,,,
