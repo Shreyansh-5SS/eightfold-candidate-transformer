@@ -1,0 +1,4 @@
+phonenumbers==8.13.39
+requests==2.31.0
+jsonschema==4.21.1
+pytest==7.4.4
