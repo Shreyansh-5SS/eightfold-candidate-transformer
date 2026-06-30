@@ -1,0 +1,13 @@
+{
+  "fields": [
+    { "path": "full_name", "type": "string", "required": true },
+    { "path": "phone", "from": "phones[0]", "type": "string", "normalize": "E164" },
+    { "path": "headline", "type": "string" }
+  ],
+  "field_priority": {
+    "phones": ["github", "recruiter_csv"],
+    "headline": ["recruiter_csv", "github"]
+  },
+  "include_confidence": true,
+  "on_missing": "null"
+}

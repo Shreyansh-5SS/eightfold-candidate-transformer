@@ -59,8 +59,8 @@ def run_pipeline(args) -> List[dict]:
         logger.warning("No raw records collected from any source — output will be empty.")
         return []
 
-    candidates = merge_records(raw_records)
     config = load_config(args.config)
+    candidates = merge_records(raw_records, field_priority=config.get("field_priority"))
 
     valid_outputs = []
     failed_count = 0

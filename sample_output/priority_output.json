@@ -1,385 +1,50 @@
 [
   {
-    "candidate_id": "79eb2e2a-f529-4427-ad3d-f2b1045c54a0",
     "full_name": "Aarav Sharma",
     "full_name_confidence": 0.9,
-    "emails": [
-      "aarav.sharma@example.com"
-    ],
-    "emails_confidence": 0.9,
-    "phones": [
-      "+919876543210"
-    ],
-    "phones_confidence": 0.9,
-    "location": {
-      "city": null,
-      "region": null,
-      "country": null
-    },
-    "links": {
-      "linkedin": null,
-      "github": null,
-      "portfolio": null,
-      "other": []
-    },
+    "phone": "+919876543210",
+    "phone_confidence": 0.9,
     "headline": null,
-    "years_experience": null,
-    "skills": null,
-    "skills_confidence": 0.0,
-    "experience": [
-      {
-        "company": "TechNova Inc",
-        "title": "Software Engineer",
-        "start": null,
-        "end": null,
-        "summary": null
-      }
-    ],
-    "education": null,
-    "_overall_confidence": 0.9,
-    "_provenance": [
-      {
-        "field": "emails",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      },
-      {
-        "field": "phones",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      },
-      {
-        "field": "experience",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      }
-    ]
+    "_overall_confidence": 0.9
   },
   {
-    "candidate_id": "14b70d2e-623f-4ade-a215-b88665453378",
     "full_name": "Priya Verma",
     "full_name_confidence": 0.9,
-    "emails": [
-      "priya.verma@example.com"
-    ],
-    "emails_confidence": 0.9,
-    "phones": [
-      "+919876500000"
-    ],
-    "phones_confidence": 0.9,
-    "location": {
-      "city": null,
-      "region": null,
-      "country": null
-    },
-    "links": {
-      "linkedin": null,
-      "github": null,
-      "portfolio": null,
-      "other": []
-    },
+    "phone": "+919876500000",
+    "phone_confidence": 0.9,
     "headline": null,
-    "years_experience": null,
-    "skills": null,
-    "skills_confidence": 0.0,
-    "experience": [
-      {
-        "company": "DataWorks",
-        "title": "Senior Analyst",
-        "start": null,
-        "end": null,
-        "summary": null
-      }
-    ],
-    "education": null,
-    "_overall_confidence": 0.9,
-    "_provenance": [
-      {
-        "field": "emails",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      },
-      {
-        "field": "phones",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      },
-      {
-        "field": "experience",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      }
-    ]
+    "_overall_confidence": 0.9
   },
   {
-    "candidate_id": "bd8c247a-276e-4396-87d9-30a44a05f0b5",
     "full_name": "Rohan Mehta",
     "full_name_confidence": 0.9,
-    "emails": [
-      "rohan.mehta@example.com"
-    ],
-    "emails_confidence": 0.9,
-    "phones": null,
-    "phones_confidence": 0.0,
-    "location": {
-      "city": null,
-      "region": null,
-      "country": null
-    },
-    "links": {
-      "linkedin": null,
-      "github": null,
-      "portfolio": null,
-      "other": []
-    },
+    "phone": null,
+    "phone_confidence": 0.0,
     "headline": null,
-    "years_experience": null,
-    "skills": null,
-    "skills_confidence": 0.0,
-    "experience": [
-      {
-        "company": "CloudSys",
-        "title": "Backend Developer",
-        "start": null,
-        "end": null,
-        "summary": null
-      }
-    ],
-    "education": null,
-    "_overall_confidence": 0.9,
-    "_provenance": [
-      {
-        "field": "emails",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      },
-      {
-        "field": "experience",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      }
-    ]
+    "_overall_confidence": 0.9
   },
   {
-    "candidate_id": "fa332e6e-2720-4153-997f-f23795f8ad10",
     "full_name": "Linus Torvalds",
     "full_name_confidence": 1.0,
-    "emails": [
-      "torvalds@example.com"
-    ],
-    "emails_confidence": 0.9,
-    "phones": [
-      "+911234567890"
-    ],
-    "phones_confidence": 0.9,
-    "location": {
-      "city": "Portland",
-      "region": null,
-      "country": null
-    },
-    "location_confidence": 0.7,
-    "links": {
-      "linkedin": null,
-      "github": "https://github.com/torvalds",
-      "portfolio": null,
-      "other": []
-    },
+    "phone": "+911234567890",
+    "phone_confidence": 0.9,
     "headline": null,
-    "years_experience": null,
-    "skills": [
-      "C",
-      "C++",
-      "Openscad"
-    ],
-    "skills_confidence": 0.7,
-    "experience": [
-      {
-        "company": "Linux Foundation",
-        "title": "Kernel Maintainer",
-        "start": null,
-        "end": null,
-        "summary": null
-      }
-    ],
-    "education": null,
-    "_overall_confidence": 0.84,
-    "_provenance": [
-      {
-        "field": "emails",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      },
-      {
-        "field": "phones",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      },
-      {
-        "field": "links.github",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "location",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[C]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[C++]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[Openscad]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "experience",
-        "source": "recruiter_csv",
-        "method": "structured_direct"
-      }
-    ]
+    "_overall_confidence": 0.84
   },
   {
-    "candidate_id": "32d07230-f14e-4667-882e-39050bcf9bb9",
     "full_name": "Guido van Rossum",
     "full_name_confidence": 0.7,
-    "emails": null,
-    "emails_confidence": 0.0,
-    "phones": null,
-    "phones_confidence": 0.0,
-    "location": {
-      "city": "San Francisco Bay Area",
-      "region": null,
-      "country": null
-    },
-    "location_confidence": 0.7,
-    "links": {
-      "linkedin": null,
-      "github": "https://github.com/gvanrossum",
-      "portfolio": null,
-      "other": []
-    },
+    "phone": null,
+    "phone_confidence": 0.0,
     "headline": null,
-    "years_experience": null,
-    "skills": [
-      "C",
-      "C++",
-      "HTML",
-      "JavaScript",
-      "Python",
-      "TypeScript"
-    ],
-    "skills_confidence": 0.7,
-    "experience": null,
-    "education": null,
-    "_overall_confidence": 0.7,
-    "_provenance": [
-      {
-        "field": "links.github",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "location",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[C]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[C++]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[HTML]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[JavaScript]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[Python]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[TypeScript]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      }
-    ]
+    "_overall_confidence": 0.7
   },
   {
-    "candidate_id": "0f5a0266-d042-4567-a2e4-4657fb30f22a",
     "full_name": "The Octocat",
     "full_name_confidence": 0.7,
-    "emails": null,
-    "emails_confidence": 0.0,
-    "phones": null,
-    "phones_confidence": 0.0,
-    "location": {
-      "city": "San Francisco",
-      "region": null,
-      "country": null
-    },
-    "location_confidence": 0.7,
-    "links": {
-      "linkedin": null,
-      "github": "https://github.com/octocat",
-      "portfolio": null,
-      "other": []
-    },
+    "phone": null,
+    "phone_confidence": 0.0,
     "headline": null,
-    "years_experience": null,
-    "skills": [
-      "CSS",
-      "HTML",
-      "Ruby"
-    ],
-    "skills_confidence": 0.7,
-    "experience": null,
-    "education": null,
-    "_overall_confidence": 0.7,
-    "_provenance": [
-      {
-        "field": "links.github",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "location",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[CSS]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[HTML]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      },
-      {
-        "field": "skills[Ruby]",
-        "source": "github",
-        "method": "unstructured_extracted"
-      }
-    ]
+    "_overall_confidence": 0.7
   }
 ]

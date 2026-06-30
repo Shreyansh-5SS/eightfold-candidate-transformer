@@ -41,3 +41,16 @@ def test_skill_agreement_boosts_confidence():
     skill = next(s for s in candidates[0].skills if s.name == "Python")
     assert "github" in skill.sources
     assert skill.confidence >= 1.0  # capped at 1.0 even after bonus
+
+def test_field_priority_override_changes_phone_order():
+    r1 = _record("recruiter_csv", "x@example.com",
+                  {"full_name": "Test Person", "email": "x@example.com", "phone": "9876543210"})
+    r2 = _record("github", None,
+                  {"full_name": "Test Person", "headline": "From GitHub"})
+    r2.data["phone"] = "9123456780"  # simulate a phone-bearing unstructured source for the test
+
+    default_candidates = merge_records([r1, r2])
+    assert default_candidates[0].phones[0] == "+919876543210"  # recruiter_csv first by default order
+
+    priority_candidates = merge_records([r1, r2], field_priority={"phones": ["github", "recruiter_csv"]})
+    assert priority_candidates[0].phones[0] == "+919123456780"  # github now wins

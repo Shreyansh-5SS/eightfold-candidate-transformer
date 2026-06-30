@@ -111,11 +111,17 @@ def _resolve_emails(group: List[RawRecord], provenance: List[ProvenanceEntry]) -
 
 
 def _resolve_phones(group: List[RawRecord], field_conf: Dict[str, float],
-                     provenance: List[ProvenanceEntry]) -> List[str]:
+                     provenance: List[ProvenanceEntry],
+                     priority: Optional[List[str]] = None) -> List[str]:
+    ordered_group = group
+    if priority:
+        priority_index = {s: i for i, s in enumerate(priority)}
+        ordered_group = sorted(group, key=lambda r: priority_index.get(r.source, len(priority)))
+
     phones = []
     seen = set()
     contributing_sources = []
-    for r in group:
+    for r in ordered_group:
         raw = r.data.get("phone")
         if not raw:
             continue
@@ -159,14 +165,17 @@ def _resolve_links_and_location(group: List[RawRecord], field_conf: Dict[str, fl
 
 
 def _resolve_headline(group: List[RawRecord], field_conf: Dict[str, float],
-                       provenance: List[ProvenanceEntry]) -> Optional[str]:
-    for r in group:
-        if r.source in UNSTRUCTURED_SOURCES:
-            headline = r.data.get("headline")
-            if headline:
-                provenance.append(ProvenanceEntry(field="headline", source=r.source, method="unstructured_extracted"))
-                field_conf["headline"] = _field_confidence([r.source])
-                return headline
+                       provenance: List[ProvenanceEntry],
+                       priority: Optional[List[str]] = None) -> Optional[str]:
+    ordered_sources = priority if priority else list(UNSTRUCTURED_SOURCES)
+    for preferred_source in ordered_sources:
+        for r in group:
+            if r.source == preferred_source:
+                headline = r.data.get("headline")
+                if headline:
+                    provenance.append(ProvenanceEntry(field="headline", source=r.source, method="unstructured_extracted"))
+                    field_conf["headline"] = _field_confidence([r.source])
+                    return headline
     return None
 
 
@@ -211,9 +220,15 @@ def _resolve_experience(group: List[RawRecord], provenance: List[ProvenanceEntry
     return experience
 
 
-def merge_records(raw_records: List[RawRecord]) -> List[CanonicalCandidate]:
+def merge_records(raw_records: List[RawRecord],
+                   field_priority: Optional[Dict[str, List[str]]] = None) -> List[CanonicalCandidate]:
     """Group raw records into one CanonicalCandidate per real person, resolving
-    field-level conflicts and attaching provenance + confidence."""
+    field-level conflicts and attaching provenance + confidence.
+
+    field_priority: optional override, e.g. {"phones": ["github", "recruiter_csv"]} —
+    lets the runtime config decide which source wins per field, instead of the
+    structured/unstructured bias being hardcoded."""
+    field_priority = field_priority or {}
     groups = _group_records(raw_records)
     candidates: List[CanonicalCandidate] = []
 
@@ -224,9 +239,9 @@ def merge_records(raw_records: List[RawRecord]) -> List[CanonicalCandidate]:
         full_name = _resolve_full_name(group)
         emails = _resolve_emails(group, provenance)
         field_conf["emails"] = _field_confidence([r.source for r in group if r.data.get("email")])
-        phones = _resolve_phones(group, field_conf, provenance)
+        phones = _resolve_phones(group, field_conf, provenance, priority=field_priority.get("phones"))
         links, location = _resolve_links_and_location(group, field_conf, provenance)
-        headline = _resolve_headline(group, field_conf, provenance)
+        headline = _resolve_headline(group, field_conf, provenance, priority=field_priority.get("headline"))
         skills = _resolve_skills(group, field_conf, provenance)
         experience = _resolve_experience(group, provenance)
 
